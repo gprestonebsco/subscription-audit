@@ -25,7 +25,7 @@ class InfoTable extends Component {
           })}
         </tbody>
       </table>
-    )
+    );
   }
 
   _renderRow(fs, rowIndex) {
@@ -42,7 +42,7 @@ class InfoTable extends Component {
           {Utilities.getSubscriptionNamesOfType(fs, 'ACCOUNTABLE')}
         </td>
       </tr>
-    )
+    );
   }
 }
 
