@@ -2,7 +2,6 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import './assets/main.css';
 import './assets/popover.css';
-import './assets/backdrop.css';
 
 // Importing '@leanix/reporting' makes the `lx` object globally available
 // IMPORTANT: Make sure lodash (window._) and jQuery (window.$) are globally available,
