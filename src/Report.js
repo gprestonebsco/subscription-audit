@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import ReactHighcharts from 'react-highcharts';
+
 import Utilities from './Utilities';
 import InfoTable from './InfoTable';
 import ChartTools from './ChartTools';
 
-export class Report {
+class Report extends Component {
 
   /*
     BusinessCapability -> Domain
@@ -19,11 +21,24 @@ export class Report {
     TechnicalStack -> Technical Stack
     */
 
+  /*
   constructor(setup) {
     this.setup = setup;
   }
+  */
 
-  createConfig() {
+  constructor(props) {
+    super(props);
+    this._initReport = this._initReport.bind(this);
+    this._createConfig = this._createConfig.bind(this);
+  }
+
+  _initReport(setup) {
+    this.setup = setup;
+    lx.init().then(lx.ready(this._createConfig));
+  }
+
+  _createConfig() {
     return {
       facets: [{
         attributes: ['displayName', 'type',
@@ -58,6 +73,7 @@ export class Report {
     let subCounts = ChartTools.countSubTypes(subTypes);
 
     let n = 0;
+    /*
     for (let i = 0; i < fsKeys.length; i++) {
       // Erase each div's contents
       $(`#chart${i}`).html('');
@@ -69,5 +85,13 @@ export class Report {
         n += 1;
       }
     }
+    // ===============
+    ReactDOM.render(<div id={'chart' + n}></div>, document.getElementById('report'));
+    let subPercents = Utilities.computeSubPercents(subCounts[fsKeys[0]]);
+    ReactDOM.render(ChartTools.createHighchart(fsKeys[0], subPercents, fsTypes, data, 0), document.getElementById('test'));
+    */
+    return <h1>React Component Test</h1>;
   }
 }
+
+export default Report;

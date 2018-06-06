@@ -1,6 +1,8 @@
 import * as Highcharts from 'highcharts';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactHighcharts from 'react-highcharts';
+
 import InfoTable from './InfoTable';
 import Utilities from './Utilities';
 
@@ -35,7 +37,8 @@ function countSubTypes(subTypes) {
 // Build a pie chart to show responsible/accountable user counts for the given data
 function createHighchart(fsType, subTypes, typeNames, data, n) {
   const options = this.buildHighchartsOptions(fsType, subTypes, typeNames, data);
-  Highcharts.chart(`chart${n}`, options);
+  //Highcharts.chart(`chart${n}`, options);
+  return <ReactHighcharts config={options} />;
 }
 
 // Generate the options for the desired pie chart

@@ -9,7 +9,9 @@ import './assets/popover.css';
 import '@leanix/reporting';
 
 // We have declared our report class in a seperate file and import it here
-import { Report } from './Report';
+import Report from './Report';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // Start with info hidden
 $('#info').hide();
@@ -21,6 +23,7 @@ $('#backdrop').on('click', function() {
   document.body.style.overflowY = 'scroll';
 });
 
+/*
 // We have to call init() in order to tell the reporting framework
 // that we want to start initializing our report.
 // `init()` returns a promise that will be resolved as soon as the initialization has finished
@@ -37,3 +40,5 @@ lx.init()
   // that our report is ready to receive data.
   lx.ready(config);
 });
+*/
+ReactDOM.render(<Report />, document.getElementById('report'));
