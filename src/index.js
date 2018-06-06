@@ -34,11 +34,12 @@ lx.init()
 
   // Now we create our report object with the setup and create a config object.
   var report = new Report(setup);
-  var config = report.createConfig();
+  var config = report._createConfig();
 
   // With the config object, we call `lx.ready()` in order to tell the framework
   // that our report is ready to receive data.
   lx.ready(config);
 });
 */
+
 ReactDOM.render(<Report />, document.getElementById('report'));
