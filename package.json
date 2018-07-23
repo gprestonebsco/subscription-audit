@@ -42,15 +42,16 @@
     "webpack-dev-server": "2.5.0"
   },
   "dependencies": {
-    "@leanix/reporting": "^0.2.0",
-    "bootstrap": "^4.1.1",
+    "@leanix/reporting": "^0.2.4",
+    "bootstrap": "^4.1.2",
     "handsontable": "^3.0.0",
-    "highcharts": "^6.1.0",
+    "highcharts": "^6.1.1",
     "hoek": "^5.0.3",
     "jquery": "^3.3.1",
-    "npm": "^6.1.0",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "mime": "^2.3.1",
+    "npm": "^6.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-highcharts": "^16.0.2"
   }
 }
